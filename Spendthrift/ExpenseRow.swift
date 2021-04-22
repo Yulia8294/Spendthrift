@@ -39,9 +39,31 @@ struct ExpenseRow: View {
     }
 }
 
+struct ExpenseRowButton: ButtonStyle {
+    
+    var expense: Expense
+    
+    func makeBody(configuration: Configuration) -> some View {
+        ExpenseRow(expense: expense)
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.5))
+    }
+}
+
 struct ExpenseRow_Previews: PreviewProvider {
     static var previews: some View {
         ExpenseRow(expense: fakeExpenses.first!)
+    }
+}
+
+
+struct ExpenseRowButton_Previews: PreviewProvider {
+    static var previews: some View {
+        Button("") {
+            
+        }.buttonStyle(ExpenseRowButton(expense: fakeExpenses.first!))
+            
+       // ExpenseRow(expense: fakeExpenses.first!)
     }
 }
 

@@ -11,11 +11,6 @@ struct ContentView: View {
     
     var expenses = fakeExpenses
     
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(Color.white)
-
-    }
-    
     var body: some View {
         
         
@@ -33,8 +28,12 @@ struct ContentView: View {
                         }
                         
                         Section {
-                            ForEach(expenses) { expense in
-                                ExpenseRow(expense: expense)
+                                ForEach(expenses) { expense in
+                                    VStack {
+
+                                    Button("") {}
+                                        .buttonStyle(ExpenseRowButton(expense: expense))
+                                }
                             }
                         }
                     }

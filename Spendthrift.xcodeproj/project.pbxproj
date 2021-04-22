@@ -12,6 +12,7 @@
 		A39170E2263153C400C17E48 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E1263153C400C17E48 /* CategoryItem.swift */; };
 		A39170E5263153E100C17E48 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E4263153E100C17E48 /* Theme.swift */; };
 		A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E8263156EC00C17E48 /* ExpenseCategory.swift */; };
+		A39170F72631858D00C17E48 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170F62631858D00C17E48 /* NewExpenseView.swift */; };
 		A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */; };
 		A3EDD94D262A1ABC002160E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94C262A1ABC002160E2 /* ContentView.swift */; };
 		A3EDD94F262A1AC0002160E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDD94E262A1AC0002160E2 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		A39170E1263153C400C17E48 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		A39170E4263153E100C17E48 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A39170E8263156EC00C17E48 /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
+		A39170F62631858D00C17E48 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		A3EDD947262A1ABC002160E2 /* Spendthrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendthrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendthriftApp.swift; sourceTree = "<group>"; };
 		A3EDD94C262A1ABC002160E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,9 +80,26 @@
 		A39170E7263156CD00C17E48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A374E052262A2BD900DE46EF /* Expense.swift */,
 				A39170E8263156EC00C17E48 /* ExpenseCategory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A39170ED26317F8700C17E48 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A39170F02631856E00C17E48 /* NewExpense */ = {
+			isa = PBXGroup;
+			children = (
+				A39170F62631858D00C17E48 /* NewExpenseView.swift */,
+			);
+			path = NewExpense;
 			sourceTree = "<group>";
 		};
 		A3EDD93E262A1ABC002160E2 = {
@@ -102,15 +121,15 @@
 		A3EDD949262A1ABC002160E2 /* Spendthrift */ = {
 			isa = PBXGroup;
 			children = (
+				A39170F02631856E00C17E48 /* NewExpense */,
+				A39170ED26317F8700C17E48 /* Application */,
 				A39170E7263156CD00C17E48 /* Model */,
 				A3EDD985262A1D2A002160E2 /* Utils */,
 				A3EDD961262A1CB6002160E2 /* Components */,
-				A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */,
 				A3EDD94C262A1ABC002160E2 /* ContentView.swift */,
 				A3EDD94E262A1AC0002160E2 /* Assets.xcassets */,
 				A3EDD953262A1AC0002160E2 /* Info.plist */,
 				A3EDD950262A1AC0002160E2 /* Preview Content */,
-				A374E052262A2BD900DE46EF /* Expense.swift */,
 				A374E055262A2CBD00DE46EF /* ExpenseRow.swift */,
 				A39170E1263153C400C17E48 /* CategoryItem.swift */,
 				A39170E4263153E100C17E48 /* Theme.swift */,
@@ -269,6 +288,7 @@
 				A3EDD97D262A1CB6002160E2 /* ExpandableButton.swift in Sources */,
 				A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */,
 				A3EDD975262A1CB6002160E2 /* NeumorphicButton.swift in Sources */,
+				A39170F72631858D00C17E48 /* NewExpenseView.swift in Sources */,
 				A3EDD98D262A1D2A002160E2 /* NavigationConfigurator.swift in Sources */,
 				A374E053262A2BD900DE46EF /* Expense.swift in Sources */,
 				A3EDD97E262A1CB6002160E2 /* BizzarBG.swift in Sources */,
