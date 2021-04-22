@@ -11,15 +11,10 @@ import UIKit
 
 struct NewExpenseView: View {
     
-    @State var mode: Bool = false
-    @State var amount: Double? = 0
-    @State var category: ExpenseCategory = .foods
-    @State var date: Date = Date()
-    @State var note: String = ""
+    @ObservedObject var viewModel: NewExpenseViewModel = NewExpenseViewModel()
     
     init() {
         UITableView.appearance().backgroundColor = .clear
-        
     }
     
     
@@ -32,7 +27,7 @@ struct NewExpenseView: View {
             Form {
                 
                 Section {
-                    Picker(selection: $mode, label: Text("")) {
+                    Picker(selection: $viewModel.mode, label: Text("")) {
                         Text("Expense").tag(false)
                         Text("Income").tag(true)
                     }.pickerStyle(SegmentedPickerStyle())
@@ -41,7 +36,7 @@ struct NewExpenseView: View {
                 
                 HStack {
                     Spacer()
-                    CurrencyTextField("Enter $", value: $amount, currencySymbol: "$", font: UIFont.systemFont(ofSize: 25), foregroundColor: .background, accentColor: .background, textAlignment: .center, keyboardType: UIKeyboardType.decimalPad, returnKeyType: .done, isSecure: false, isUserInteractionEnabled: true, clearsOnBeginEditing: false)
+                    CurrencyTextField("Enter $", value: $viewModel.amount, currencySymbol: "$", font: UIFont.systemFont(ofSize: 25), foregroundColor: .background, accentColor: .background, textAlignment: .center, keyboardType: UIKeyboardType.decimalPad, returnKeyType: .done, isSecure: false, isUserInteractionEnabled: true, clearsOnBeginEditing: false, onEditingChanged: <#T##(Bool) -> Void#>)
                         .font(.title)
                         .frame(height: 100)
                     Spacer()
@@ -49,28 +44,27 @@ struct NewExpenseView: View {
                 
                 Section(header: Text("Settings")) {
                     
-                    Picker("Category", selection: $category) {
+                    Picker("Category", selection: $viewModel.category) {
                         MainView()
                     }
                     
-                    DatePicker("Date", selection: $date, displayedComponents: .date)
+                    DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
                         .accentColor(.background)
                     
-                    TextField("Notes", text: $note)
+                    TextField("Notes", text: $viewModel.note)
                         .font(.body)
                         .foregroundColor(.dark)
                     
                 }
                 
-                Button("Save") {
-                    
-                }
-                
+                Button("Save") { self.viewModel.saveNewExpense()}
+                    .disabled(!viewModel.isValid)
             }
             .accentColor(.background)
         }
     }
     
+    private func editingChanged()
 }
 
 struct NewExpenseView_Previews: PreviewProvider {
