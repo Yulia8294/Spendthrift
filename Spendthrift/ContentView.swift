@@ -11,6 +11,9 @@ struct ContentView: View {
     
     var expenses = fakeExpenses
     
+    @State var presentingModal = false
+
+    
     var body: some View {
         
         
@@ -43,8 +46,11 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button("+") {}
-                    .buttonStyle(NeumorphicButton(cornerRadius: 40, height: 60, width: 60))
+                Button("+") {
+                    self.presentingModal = true
+                }
+                .buttonStyle(NeumorphicButton(cornerRadius: 40, height: 60, width: 60))
+                .sheet(isPresented: $presentingModal) { NewExpenseView() }
             }
         }
     }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		A39170E5263153E100C17E48 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E4263153E100C17E48 /* Theme.swift */; };
 		A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E8263156EC00C17E48 /* ExpenseCategory.swift */; };
 		A39170F72631858D00C17E48 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170F62631858D00C17E48 /* NewExpenseView.swift */; };
+		A39170FF26319E9A00C17E48 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170FE26319E9A00C17E48 /* CurrencyTextField.swift */; };
 		A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */; };
 		A3EDD94D262A1ABC002160E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94C262A1ABC002160E2 /* ContentView.swift */; };
 		A3EDD94F262A1AC0002160E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDD94E262A1AC0002160E2 /* Assets.xcassets */; };
@@ -33,15 +34,19 @@
 		A3EDD98B262A1D2A002160E2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD987262A1D2A002160E2 /* Extensions.swift */; };
 		A3EDD98C262A1D2A002160E2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD988262A1D2A002160E2 /* Colors.swift */; };
 		A3EDD98D262A1D2A002160E2 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD989262A1D2A002160E2 /* NavigationConfigurator.swift */; };
+		B300D4E8F6B8B1CA4BA278C6 /* Pods_Spendthrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6245A49D2468EB4AFED80B4 /* Pods_Spendthrift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63465B79A19A2D69E2683DD8 /* Pods-Spendthrift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spendthrift.debug.xcconfig"; path = "Target Support Files/Pods-Spendthrift/Pods-Spendthrift.debug.xcconfig"; sourceTree = "<group>"; };
+		65C9D57B727E6FAE743EA87C /* Pods-Spendthrift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spendthrift.release.xcconfig"; path = "Target Support Files/Pods-Spendthrift/Pods-Spendthrift.release.xcconfig"; sourceTree = "<group>"; };
 		A374E052262A2BD900DE46EF /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		A374E055262A2CBD00DE46EF /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
 		A39170E1263153C400C17E48 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		A39170E4263153E100C17E48 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A39170E8263156EC00C17E48 /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
 		A39170F62631858D00C17E48 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
+		A39170FE26319E9A00C17E48 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		A3EDD947262A1ABC002160E2 /* Spendthrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendthrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendthriftApp.swift; sourceTree = "<group>"; };
 		A3EDD94C262A1ABC002160E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		A3EDD987262A1D2A002160E2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A3EDD988262A1D2A002160E2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A3EDD989262A1D2A002160E2 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		A6245A49D2468EB4AFED80B4 /* Pods_Spendthrift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spendthrift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +77,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B300D4E8F6B8B1CA4BA278C6 /* Pods_Spendthrift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53886C619D663EF76EE6609C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6245A49D2468EB4AFED80B4 /* Pods_Spendthrift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A39170E7263156CD00C17E48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +122,8 @@
 			children = (
 				A3EDD949262A1ABC002160E2 /* Spendthrift */,
 				A3EDD948262A1ABC002160E2 /* Products */,
+				A85DF949B570BE6B24BF7FB0 /* Pods */,
+				53886C619D663EF76EE6609C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,8 +212,18 @@
 				A3EDD987262A1D2A002160E2 /* Extensions.swift */,
 				A3EDD988262A1D2A002160E2 /* Colors.swift */,
 				A3EDD989262A1D2A002160E2 /* NavigationConfigurator.swift */,
+				A39170FE26319E9A00C17E48 /* CurrencyTextField.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A85DF949B570BE6B24BF7FB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63465B79A19A2D69E2683DD8 /* Pods-Spendthrift.debug.xcconfig */,
+				65C9D57B727E6FAE743EA87C /* Pods-Spendthrift.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3EDD956262A1AC0002160E2 /* Build configuration list for PBXNativeTarget "Spendthrift" */;
 			buildPhases = (
+				341C396FF8448979D4D6E151 /* [CP] Check Pods Manifest.lock */,
 				A3EDD943262A1ABC002160E2 /* Sources */,
 				A3EDD944262A1ABC002160E2 /* Frameworks */,
 				A3EDD945262A1ABC002160E2 /* Resources */,
+				645D1320D3624EE5ED85FB6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +292,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		341C396FF8448979D4D6E151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spendthrift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		645D1320D3624EE5ED85FB6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spendthrift/Pods-Spendthrift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spendthrift/Pods-Spendthrift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spendthrift/Pods-Spendthrift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A3EDD943262A1ABC002160E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,6 +352,7 @@
 				A39170E2263153C400C17E48 /* CategoryItem.swift in Sources */,
 				A3EDD98A262A1D2A002160E2 /* StaticData.swift in Sources */,
 				A3EDD98C262A1D2A002160E2 /* Colors.swift in Sources */,
+				A39170FF26319E9A00C17E48 /* CurrencyTextField.swift in Sources */,
 				A3EDD97A262A1CB6002160E2 /* WeavyHeader.swift in Sources */,
 				A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */,
 				A3EDD978262A1CB6002160E2 /* Wave.swift in Sources */,
@@ -416,6 +488,7 @@
 		};
 		A3EDD957262A1AC0002160E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63465B79A19A2D69E2683DD8 /* Pods-Spendthrift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -438,6 +511,7 @@
 		};
 		A3EDD958262A1AC0002160E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C9D57B727E6FAE743EA87C /* Pods-Spendthrift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

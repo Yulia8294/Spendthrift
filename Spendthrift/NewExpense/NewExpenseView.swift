@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import IQKeyboardManager
+import UIKit
 
 struct NewExpenseView: View {
     
     @State var mode: Bool = false
-    @State var amount: Int = 0
+    @State var amount: Double? = 0
     @State var category: ExpenseCategory = .foods
     @State var date: Date = Date()
     @State var note: String = ""
@@ -39,11 +41,8 @@ struct NewExpenseView: View {
                 
                 HStack {
                     Spacer()
-                    TextField("", value: $amount, formatter: NumberFormatter.currency)
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(.background)
-                        .multilineTextAlignment(.center)
-                        .keyboardType(.numberPad)
+                    CurrencyTextField("Enter $", value: $amount, currencySymbol: "$", font: UIFont.systemFont(ofSize: 25), foregroundColor: .background, accentColor: .background, textAlignment: .center, keyboardType: UIKeyboardType.decimalPad, returnKeyType: .done, isSecure: false, isUserInteractionEnabled: true, clearsOnBeginEditing: false)
+                        .font(.title)
                         .frame(height: 100)
                     Spacer()
                 }
@@ -67,7 +66,8 @@ struct NewExpenseView: View {
                     
                 }
                 
-            }.background(Color.bizzarBlue)
+            }
+            .accentColor(.background)
         }
     }
     

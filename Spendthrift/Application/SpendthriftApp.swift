@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import IQKeyboardManager
 
 @main
 struct SpendthriftApp: App {
+    
+    init() {
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
+    }
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
