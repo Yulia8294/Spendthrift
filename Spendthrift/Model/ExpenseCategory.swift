@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ExpenseCategory: String {
+enum ExpenseCategory: String, CaseIterable {
     
     case recent = "Recent"
     case misc = "Miscellaneous"

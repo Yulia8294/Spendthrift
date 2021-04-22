@@ -50,7 +50,7 @@ struct NewExpenseView: View {
                 Section(header: Text("Settings")) {
                     
                     Picker("Category", selection: $category) {
-                        ContentView()
+                        MainView()
                     }
                     
                     DatePicker("Date", selection: $date, displayedComponents: .date)

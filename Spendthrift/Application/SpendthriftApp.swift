@@ -18,7 +18,7 @@ struct SpendthriftApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

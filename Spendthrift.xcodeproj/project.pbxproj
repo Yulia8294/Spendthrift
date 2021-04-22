@@ -14,8 +14,10 @@
 		A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E8263156EC00C17E48 /* ExpenseCategory.swift */; };
 		A39170F72631858D00C17E48 /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170F62631858D00C17E48 /* NewExpenseView.swift */; };
 		A39170FF26319E9A00C17E48 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170FE26319E9A00C17E48 /* CurrencyTextField.swift */; };
+		A39171032631B7ED00C17E48 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39171022631B7ED00C17E48 /* CategoriesListView.swift */; };
+		A39171092631C04000C17E48 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39171082631C04000C17E48 /* CategoryCard.swift */; };
 		A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */; };
-		A3EDD94D262A1ABC002160E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94C262A1ABC002160E2 /* ContentView.swift */; };
+		A3EDD94D262A1ABC002160E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94C262A1ABC002160E2 /* MainView.swift */; };
 		A3EDD94F262A1AC0002160E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDD94E262A1AC0002160E2 /* Assets.xcassets */; };
 		A3EDD952262A1AC0002160E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDD951262A1AC0002160E2 /* Preview Assets.xcassets */; };
 		A3EDD975262A1CB6002160E2 /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD964262A1CB6002160E2 /* NeumorphicButton.swift */; };
@@ -47,9 +49,11 @@
 		A39170E8263156EC00C17E48 /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
 		A39170F62631858D00C17E48 /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		A39170FE26319E9A00C17E48 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		A39171022631B7ED00C17E48 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
+		A39171082631C04000C17E48 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		A3EDD947262A1ABC002160E2 /* Spendthrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendthrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendthriftApp.swift; sourceTree = "<group>"; };
-		A3EDD94C262A1ABC002160E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3EDD94C262A1ABC002160E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A3EDD94E262A1AC0002160E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3EDD951262A1AC0002160E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3EDD953262A1AC0002160E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,13 +147,15 @@
 				A39170E7263156CD00C17E48 /* Model */,
 				A3EDD985262A1D2A002160E2 /* Utils */,
 				A3EDD961262A1CB6002160E2 /* Components */,
-				A3EDD94C262A1ABC002160E2 /* ContentView.swift */,
+				A3EDD94C262A1ABC002160E2 /* MainView.swift */,
 				A3EDD94E262A1AC0002160E2 /* Assets.xcassets */,
 				A3EDD953262A1AC0002160E2 /* Info.plist */,
 				A3EDD950262A1AC0002160E2 /* Preview Content */,
 				A374E055262A2CBD00DE46EF /* ExpenseRow.swift */,
 				A39170E1263153C400C17E48 /* CategoryItem.swift */,
 				A39170E4263153E100C17E48 /* Theme.swift */,
+				A39171022631B7ED00C17E48 /* CategoriesListView.swift */,
+				A39171082631C04000C17E48 /* CategoryCard.swift */,
 			);
 			path = Spendthrift;
 			sourceTree = "<group>";
@@ -342,8 +348,10 @@
 				A3EDD982262A1CB6002160E2 /* HideNavBar.swift in Sources */,
 				A3EDD98B262A1D2A002160E2 /* Extensions.swift in Sources */,
 				A3EDD977262A1CB6002160E2 /* RoundedCorner.swift in Sources */,
+				A39171092631C04000C17E48 /* CategoryCard.swift in Sources */,
 				A3EDD97F262A1CB6002160E2 /* CircleProgressBar.swift in Sources */,
-				A3EDD94D262A1ABC002160E2 /* ContentView.swift in Sources */,
+				A39171032631B7ED00C17E48 /* CategoriesListView.swift in Sources */,
+				A3EDD94D262A1ABC002160E2 /* MainView.swift in Sources */,
 				A3EDD981262A1CB6002160E2 /* TextModifiers.swift in Sources */,
 				A3EDD97B262A1CB6002160E2 /* ContentCardButton.swift in Sources */,
 				A374E056262A2CBD00DE46EF /* ExpenseRow.swift in Sources */,

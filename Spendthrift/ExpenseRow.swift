@@ -16,13 +16,13 @@ struct ExpenseRow: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .frame(height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .foregroundColor(.white)
                 .shadow(color: Color.init(white: 0.5, opacity: 0.5), radius: 6, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 4)
             
             HStack(spacing: 15) {
                 CategoryItem(item: expense.category)
-                
+                    .frame(width: 35, height: 35)
                 Text(expense.category.rawValue)
                     .foregroundColor(Color.gray)
                     .font(.headline)
@@ -35,7 +35,6 @@ struct ExpenseRow: View {
                 
             }.padding()
         }
-        .padding(5)
     }
 }
 

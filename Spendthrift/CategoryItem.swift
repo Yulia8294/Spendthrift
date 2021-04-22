@@ -16,10 +16,12 @@ struct CategoryItem: View {
         ZStack {
 
             Image(uiImage: item.icon)
+                .resizable()
                 .renderingMode(.template)
                 .foregroundColor(color)
                 .padding(10)
                 .background(color.opacity(0.15))
+                .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
             
         }
