@@ -41,14 +41,14 @@ struct ExpensesView: View {
                 HStack {
                     Spacer()
                     
-                    Button(action: { self.presentingModal = true },
+                    Button(action: { viewModel.startedAddingNewExpense() },
                            label: {
                             Text("+")
                                 .font(.system(.largeTitle))
                                 .foregroundColor(Color.white)
                                 .padding(.bottom, 7)
                            })
-                        .sheet(isPresented: $presentingModal) { NewExpenseView() }
+                        .sheet(isPresented: $viewModel.addingNewExpense) { NewExpenseView(viewModel: viewModel) }
                         .frame(width: 60, height: 60, alignment: .center)
                         .background(Color.primaryColor)
                         .cornerRadius(30)

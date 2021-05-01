@@ -71,3 +71,23 @@ extension View {
     }
 }
 
+
+extension Optional where Wrapped == Double {
+    
+    var anyValue: Double {
+        switch self {
+        case .none: return 0
+        case let .some(double): return double
+        }
+    }
+}
+
+extension Double {
+    func truncate() -> String {
+        let formatter = NumberFormatter()
+        let number = NSNumber(value: self)
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 16
+        return String(formatter.string(from: number) ?? "")
+    }
+}

@@ -11,6 +11,7 @@ import Combine
 
 class ExpensesViewModel: ObservableObject {
     
+    @Published var addingNewExpense = false
     @Published var repo: ExpensesRepo = Resolver.resolve()
     @Published var items: [Expense] = []
     
@@ -20,6 +21,16 @@ class ExpensesViewModel: ObservableObject {
         repo.$expenses
             .assign(to: \.items, on: self)
             .store(in: &cancellables)
+    }
+    
+    //MARK: - API
+    
+    func startedAddingNewExpense() {
+        addingNewExpense = true
+    }
+    
+    func finishedAddingNewExpense() {
+        addingNewExpense = false
     }
     
     

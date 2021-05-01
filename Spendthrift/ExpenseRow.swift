@@ -29,7 +29,7 @@ struct ExpenseRow: View {
                 
                 Spacer()
 
-                Text("\(expense.ammount) $")
+                Text("\(expense.ammount.truncate()) $")
                     .foregroundColor(Color.gray)
                     .font(.headline)
                 

@@ -11,9 +11,10 @@ import UIKit
 
 struct NewExpenseView: View {
     
-    @ObservedObject var viewModel = NewExpenseViewModel()
+    @ObservedObject var viewModel: NewExpenseViewModel
     
-    init() {
+    init(viewModel: ExpensesViewModel) {
+        self.viewModel = NewExpenseViewModel(viewModel)
         UITableView.appearance().backgroundColor = .clear
     }
     
@@ -68,9 +69,9 @@ struct NewExpenseView: View {
     
 }
 
-struct NewExpenseView_Previews: PreviewProvider {
+struct NewExpenseView_Previews: PreviewProvider {    
     static var previews: some View {
-        NewExpenseView()
+        NewExpenseView(viewModel: ExpensesViewModel())
     }
 }
 

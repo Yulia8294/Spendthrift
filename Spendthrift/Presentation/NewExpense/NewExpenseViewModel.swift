@@ -23,9 +23,13 @@ class NewExpenseViewModel: ObservableObject {
     @Published var isValid: Bool = false
     @Published var passwordMessage = ""
     
+    private var expensesModel: ExpensesViewModel
+    
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init() {
+    init(_ expensesModel: ExpensesViewModel) {
+        self.expensesModel = expensesModel
+        
         isAmountValid
             .receive(on: RunLoop.main)
             .assign(to: \.isValid, on: self)
@@ -47,17 +51,9 @@ class NewExpenseViewModel: ObservableObject {
     func saveNewExpense() {
         let expense = Expense(ammount: amount.anyValue, category: category, note: note, date: date)
         repo.append(expense)
+        expensesModel.finishedAddingNewExpense()
     }
     
     
 }
 
-extension Optional where Wrapped == Double {
-    
-    var anyValue: Double {
-        switch self {
-        case .none: return 0
-        case let .some(double): return double
-        }
-    }
-}
