@@ -5,5 +5,6 @@ target 'Spendthrift' do
   use_frameworks!
 
    pod 'IQKeyboardManager'
+   pod 'Resolver'
 
 end

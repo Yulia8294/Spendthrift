@@ -1,16 +1,20 @@
 PODS:
   - IQKeyboardManager (6.5.6)
+  - Resolver (1.4.1)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - Resolver
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - Resolver
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  Resolver: c293d0177cbc69fcb700cfd49922ae2122c1829c
 
-PODFILE CHECKSUM: 1d7f3870a45eca4da473c7af4deea099adaaa343
+PODFILE CHECKSUM: b40336a3323d4809d1b1cd4c2c650d9a397fbd04
 
 COCOAPODS: 1.10.1

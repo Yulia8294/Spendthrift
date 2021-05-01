@@ -7,8 +7,12 @@
 
 import Combine
 import Foundation
+import Resolver
+
 
 class NewExpenseViewModel: ObservableObject {
+    
+    @Published var repo: ExpensesRepo = Resolver.resolve()
     
     @Published var mode: Bool = false
     @Published var amount: Double? = 0
@@ -17,9 +21,9 @@ class NewExpenseViewModel: ObservableObject {
     @Published var note: String = ""
     
     @Published var isValid: Bool = false
+    @Published var passwordMessage = ""
     
     private var cancellableSet: Set<AnyCancellable> = []
-
     
     init() {
         isAmountValid
@@ -32,8 +36,7 @@ class NewExpenseViewModel: ObservableObject {
         $amount
             .removeDuplicates()
             .map { input in
-                guard let ammount = input else { return false }
-                return ammount > 0
+                return self.amount.anyValue > 0
             }
             .eraseToAnyPublisher()
     }
@@ -42,8 +45,19 @@ class NewExpenseViewModel: ObservableObject {
     
     
     func saveNewExpense() {
-        
+        let expense = Expense(ammount: amount.anyValue, category: category, note: note, date: date)
+        repo.append(expense)
     }
     
     
+}
+
+extension Optional where Wrapped == Double {
+    
+    var anyValue: Double {
+        switch self {
+        case .none: return 0
+        case let .some(double): return double
+        }
+    }
 }

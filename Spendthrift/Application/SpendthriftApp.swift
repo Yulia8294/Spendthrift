@@ -7,10 +7,11 @@
 
 import SwiftUI
 import IQKeyboardManager
+import Resolver
 
 @main
 struct SpendthriftApp: App {
-    
+        
     init() {
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
     }
@@ -18,7 +19,13 @@ struct SpendthriftApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            ExpensesView()
         }
     }
+}
+
+extension Resolver: ResolverRegistering {
+  public static func registerAllServices() {
+    register { ExpensesRepo() as ExpensesRepo }.scope(.application)
+  }
 }

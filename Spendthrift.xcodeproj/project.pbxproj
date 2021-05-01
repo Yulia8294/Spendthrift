@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A374E053262A2BD900DE46EF /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374E052262A2BD900DE46EF /* Expense.swift */; };
 		A374E056262A2CBD00DE46EF /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374E055262A2CBD00DE46EF /* ExpenseRow.swift */; };
+		A38D6023263D28DE00B405E2 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D6022263D28DE00B405E2 /* ExpensesViewModel.swift */; };
+		A38D6027263D2D9600B405E2 /* ExpensesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D6026263D2D9600B405E2 /* ExpensesRepo.swift */; };
 		A39170E2263153C400C17E48 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E1263153C400C17E48 /* CategoryItem.swift */; };
 		A39170E5263153E100C17E48 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E4263153E100C17E48 /* Theme.swift */; };
 		A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39170E8263156EC00C17E48 /* ExpenseCategory.swift */; };
@@ -45,6 +47,8 @@
 		65C9D57B727E6FAE743EA87C /* Pods-Spendthrift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spendthrift.release.xcconfig"; path = "Target Support Files/Pods-Spendthrift/Pods-Spendthrift.release.xcconfig"; sourceTree = "<group>"; };
 		A374E052262A2BD900DE46EF /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		A374E055262A2CBD00DE46EF /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
+		A38D6022263D28DE00B405E2 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
+		A38D6026263D2D9600B405E2 /* ExpensesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesRepo.swift; sourceTree = "<group>"; };
 		A39170E1263153C400C17E48 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		A39170E4263153E100C17E48 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A39170E8263156EC00C17E48 /* ExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategory.swift; sourceTree = "<group>"; };
@@ -98,6 +102,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A38D6020263D28BA00B405E2 /* ExpensesList */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDD94C262A1ABC002160E2 /* MainView.swift */,
+				A38D6022263D28DE00B405E2 /* ExpensesViewModel.swift */,
+			);
+			path = ExpensesList;
+			sourceTree = "<group>";
+		};
+		A38D6021263D28C600B405E2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A38D6020263D28BA00B405E2 /* ExpensesList */,
+				A39170F02631856E00C17E48 /* NewExpense */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A38D6025263D2D8C00B405E2 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				A38D6026263D2D9600B405E2 /* ExpensesRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
 		A39170E7263156CD00C17E48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,12 +175,12 @@
 		A3EDD949262A1ABC002160E2 /* Spendthrift */ = {
 			isa = PBXGroup;
 			children = (
-				A39170F02631856E00C17E48 /* NewExpense */,
+				A38D6025263D2D8C00B405E2 /* Repo */,
+				A38D6021263D28C600B405E2 /* Presentation */,
 				A39170ED26317F8700C17E48 /* Application */,
 				A39170E7263156CD00C17E48 /* Model */,
 				A3EDD985262A1D2A002160E2 /* Utils */,
 				A3EDD961262A1CB6002160E2 /* Components */,
-				A3EDD94C262A1ABC002160E2 /* MainView.swift */,
 				A3EDD94E262A1AC0002160E2 /* Assets.xcassets */,
 				A3EDD953262A1AC0002160E2 /* Info.plist */,
 				A3EDD950262A1AC0002160E2 /* Preview Content */,
@@ -361,6 +391,7 @@
 				A3EDD980262A1CB6002160E2 /* LogoHeader.swift in Sources */,
 				A3EDD976262A1CB6002160E2 /* ContactCard.swift in Sources */,
 				A39170E2263153C400C17E48 /* CategoryItem.swift in Sources */,
+				A38D6023263D28DE00B405E2 /* ExpensesViewModel.swift in Sources */,
 				A3EDD98A262A1D2A002160E2 /* StaticData.swift in Sources */,
 				A391710C2631D1FF00C17E48 /* NewExpenseViewModel.swift in Sources */,
 				A3EDD98C262A1D2A002160E2 /* Colors.swift in Sources */,
@@ -369,6 +400,7 @@
 				A39170E9263156EC00C17E48 /* ExpenseCategory.swift in Sources */,
 				A3EDD978262A1CB6002160E2 /* Wave.swift in Sources */,
 				A39170E5263153E100C17E48 /* Theme.swift in Sources */,
+				A38D6027263D2D9600B405E2 /* ExpensesRepo.swift in Sources */,
 				A3EDD97D262A1CB6002160E2 /* ExpandableButton.swift in Sources */,
 				A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */,
 				A3EDD975262A1CB6002160E2 /* NeumorphicButton.swift in Sources */,

@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct MainView: View {
-    
-    var expenses = fakeExpenses
+struct ExpensesView: View {
     
     @State var presentingModal = false
     
+    @ObservedObject var viewModel = ExpensesViewModel()
     
     var body: some View {
         
@@ -24,7 +23,7 @@ struct MainView: View {
                 
                 List {
                     Section {
-                        ForEach(expenses) { expense in
+                        ForEach(viewModel.items) { expense in
                             VStack {
                                 Button("") {}
                                     .buttonStyle(ExpenseRowButton(expense: expense))
@@ -66,7 +65,7 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ExpensesView()
     }
 }
 

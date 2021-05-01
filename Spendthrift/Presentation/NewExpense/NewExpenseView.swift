@@ -11,12 +11,11 @@ import UIKit
 
 struct NewExpenseView: View {
     
-    @ObservedObject var viewModel: NewExpenseViewModel = NewExpenseViewModel()
+    @ObservedObject var viewModel = NewExpenseViewModel()
     
     init() {
         UITableView.appearance().backgroundColor = .clear
     }
-    
     
     var body: some View {
         
@@ -36,7 +35,7 @@ struct NewExpenseView: View {
                 
                 HStack {
                     Spacer()
-                    CurrencyTextField("Enter $", value: $viewModel.amount, currencySymbol: "$", font: UIFont.systemFont(ofSize: 25), foregroundColor: .background, accentColor: .background, textAlignment: .center, keyboardType: UIKeyboardType.decimalPad, returnKeyType: .done, isSecure: false, isUserInteractionEnabled: true, clearsOnBeginEditing: false, onEditingChanged: <#T##(Bool) -> Void#>)
+                    CurrencyTextField("Enter $", value: $viewModel.amount, currencySymbol: "$", font: UIFont.systemFont(ofSize: 25), foregroundColor: .background, accentColor: .background, textAlignment: .center, keyboardType: UIKeyboardType.decimalPad, returnKeyType: .done, isSecure: false, isUserInteractionEnabled: true, clearsOnBeginEditing: false)
                         .font(.title)
                         .frame(height: 100)
                     Spacer()
@@ -45,7 +44,7 @@ struct NewExpenseView: View {
                 Section(header: Text("Settings")) {
                     
                     Picker("Category", selection: $viewModel.category) {
-                        MainView()
+                        ExpensesView()
                     }
                     
                     DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
@@ -57,14 +56,16 @@ struct NewExpenseView: View {
                     
                 }
                 
-                Button("Save") { self.viewModel.saveNewExpense()}
-                    .disabled(!viewModel.isValid)
+                Section(header: Text("")) {
+                    Button("Save") { self.viewModel.saveNewExpense()}
+                        .disabled(!viewModel.isValid)
+                }
             }
             .accentColor(.background)
+            
         }
     }
     
-    private func editingChanged()
 }
 
 struct NewExpenseView_Previews: PreviewProvider {

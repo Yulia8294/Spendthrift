@@ -13,7 +13,7 @@ struct Expense: Identifiable {
         UUID().uuidString
     }
     
-    var ammount: Int
+    var ammount: Double
     var category: ExpenseCategory
     var note: String?
     var date: Date
