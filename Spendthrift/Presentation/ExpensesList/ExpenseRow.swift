@@ -16,7 +16,7 @@ struct ExpenseRow: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15)
-                .frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(maxHeight: 70)
                 .foregroundColor(.white)
                 .shadow(color: Color.init(white: 0.5, opacity: 0.5), radius: 6, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 4)
             

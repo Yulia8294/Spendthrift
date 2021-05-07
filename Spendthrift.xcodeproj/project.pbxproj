@@ -19,6 +19,9 @@
 		A39171032631B7ED00C17E48 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39171022631B7ED00C17E48 /* CategoriesListView.swift */; };
 		A39171092631C04000C17E48 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39171082631C04000C17E48 /* CategoryCard.swift */; };
 		A391710C2631D1FF00C17E48 /* NewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A391710B2631D1FD00C17E48 /* NewExpenseViewModel.swift */; };
+		A3C3C86C2645CEB700D6ABC1 /* NewExpenseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C3C86B2645CEB700D6ABC1 /* NewExpenseButton.swift */; };
+		A3C3C86E2645D89C00D6ABC1 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C3C86D2645D89C00D6ABC1 /* Placeholder.swift */; };
+		A3C3C8702645D90500D6ABC1 /* ExpenseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C3C86F2645D90500D6ABC1 /* ExpenseList.swift */; };
 		A3EDD94B262A1ABC002160E2 /* SpendthriftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */; };
 		A3EDD94D262A1ABC002160E2 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EDD94C262A1ABC002160E2 /* ExpensesView.swift */; };
 		A3EDD94F262A1AC0002160E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EDD94E262A1AC0002160E2 /* Assets.xcassets */; };
@@ -57,7 +60,10 @@
 		A39171022631B7ED00C17E48 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		A39171082631C04000C17E48 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		A391710B2631D1FD00C17E48 /* NewExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseViewModel.swift; sourceTree = "<group>"; };
-		A3EDD947262A1ABC002160E2 /* Spendthrift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendthrift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C3C86B2645CEB700D6ABC1 /* NewExpenseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseButton.swift; sourceTree = "<group>"; };
+		A3C3C86D2645D89C00D6ABC1 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		A3C3C86F2645D90500D6ABC1 /* ExpenseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseList.swift; sourceTree = "<group>"; };
+		A3EDD947262A1ABC002160E2 /* Spendthriftt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendthriftt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EDD94A262A1ABC002160E2 /* SpendthriftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendthriftApp.swift; sourceTree = "<group>"; };
 		A3EDD94C262A1ABC002160E2 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		A3EDD94E262A1AC0002160E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 				A374E055262A2CBD00DE46EF /* ExpenseRow.swift */,
 				A3EDD94C262A1ABC002160E2 /* ExpensesView.swift */,
 				A38D6022263D28DE00B405E2 /* ExpensesViewModel.swift */,
+				A3C3C86B2645CEB700D6ABC1 /* NewExpenseButton.swift */,
+				A3C3C86F2645D90500D6ABC1 /* ExpenseList.swift */,
 			);
 			path = ExpensesList;
 			sourceTree = "<group>";
@@ -179,7 +187,7 @@
 		A3EDD948262A1ABC002160E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3EDD947262A1ABC002160E2 /* Spendthrift.app */,
+				A3EDD947262A1ABC002160E2 /* Spendthriftt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 				A3EDD96F262A1CB6002160E2 /* CircleProgressBar.swift */,
 				A3EDD970262A1CB6002160E2 /* LogoHeader.swift */,
 				A3EDD971262A1CB6002160E2 /* ViewModifiers */,
+				A3C3C86D2645D89C00D6ABC1 /* Placeholder.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -276,9 +285,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A3EDD946262A1ABC002160E2 /* Spendthrift */ = {
+		A3EDD946262A1ABC002160E2 /* Spendthriftt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3EDD956262A1AC0002160E2 /* Build configuration list for PBXNativeTarget "Spendthrift" */;
+			buildConfigurationList = A3EDD956262A1AC0002160E2 /* Build configuration list for PBXNativeTarget "Spendthriftt" */;
 			buildPhases = (
 				341C396FF8448979D4D6E151 /* [CP] Check Pods Manifest.lock */,
 				A3EDD943262A1ABC002160E2 /* Sources */,
@@ -290,9 +299,9 @@
 			);
 			dependencies = (
 			);
-			name = Spendthrift;
+			name = Spendthriftt;
 			productName = Spendthrift;
-			productReference = A3EDD947262A1ABC002160E2 /* Spendthrift.app */;
+			productReference = A3EDD947262A1ABC002160E2 /* Spendthriftt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -322,7 +331,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3EDD946262A1ABC002160E2 /* Spendthrift */,
+				A3EDD946262A1ABC002160E2 /* Spendthriftt */,
 			);
 		};
 /* End PBXProject section */
@@ -401,6 +410,9 @@
 				A39170E2263153C400C17E48 /* CategoryItem.swift in Sources */,
 				A38D6023263D28DE00B405E2 /* ExpensesViewModel.swift in Sources */,
 				A3EDD98A262A1D2A002160E2 /* StaticData.swift in Sources */,
+				A3C3C86E2645D89C00D6ABC1 /* Placeholder.swift in Sources */,
+				A3C3C8702645D90500D6ABC1 /* ExpenseList.swift in Sources */,
+				A3C3C86C2645CEB700D6ABC1 /* NewExpenseButton.swift in Sources */,
 				A391710C2631D1FF00C17E48 /* NewExpenseViewModel.swift in Sources */,
 				A3EDD98C262A1D2A002160E2 /* Colors.swift in Sources */,
 				A39170FF26319E9A00C17E48 /* CurrencyTextField.swift in Sources */,
@@ -549,7 +561,7 @@
 				DEVELOPMENT_TEAM = 4AQK3D98WC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Spendthrift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,7 +584,7 @@
 				DEVELOPMENT_TEAM = 4AQK3D98WC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Spendthrift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3EDD956262A1AC0002160E2 /* Build configuration list for PBXNativeTarget "Spendthrift" */ = {
+		A3EDD956262A1AC0002160E2 /* Build configuration list for PBXNativeTarget "Spendthriftt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3EDD957262A1AC0002160E2 /* Debug */,

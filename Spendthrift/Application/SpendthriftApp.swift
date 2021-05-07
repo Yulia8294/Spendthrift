@@ -9,6 +9,7 @@ import SwiftUI
 import IQKeyboardManager
 import Resolver
 
+@available(iOS 14.0, *)
 @main
 struct SpendthriftApp: App {
         

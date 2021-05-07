@@ -13,52 +13,30 @@ struct ExpensesView: View {
     
     @ObservedObject var viewModel = ExpensesViewModel()
     
+    @ViewBuilder
+    var contentView: some View {
+        if viewModel.items.isEmpty {
+            Placeholder()
+        } else {
+            ExpenseList(items: $viewModel.items)
+        }
+    }
+    
+    
     var body: some View {
-        
-        ZStack(alignment: .center) {
+        NavigationView {
             
-            Color.white.ignoresSafeArea(.all)
-            
-            NavigationView {
+            ZStack(alignment: .center) {
                 
-                List {
-                    Section {
-                        ForEach(viewModel.items) { expense in
-                            VStack {
-                                Button("") {}
-                                    .buttonStyle(ExpenseRowButton(expense: expense))
-                            }
-                        }
+                Color.white.edgesIgnoringSafeArea(.all)
+                
+                ExpenseList(items: $viewModel.items)
+
+                NewExpenseButton { viewModel.startedAddingNewExpense() }
+                    .sheet(isPresented: $viewModel.addingNewExpense) {
+                        NewExpenseView(viewModel: viewModel)
                     }
-                }
-                .listStyle(GroupedListStyle())
-                .navigationBarTitle("Spendthrifter")
-            }
-            
-            VStack {
-                Spacer()
-                
-                HStack {
-                    Spacer()
-                    
-                    Button(action: { viewModel.startedAddingNewExpense() },
-                           label: {
-                            Text("+")
-                                .font(.system(.largeTitle))
-                                .foregroundColor(Color.white)
-                                .padding(.bottom, 7)
-                           })
-                        .sheet(isPresented: $viewModel.addingNewExpense) { NewExpenseView(viewModel: viewModel) }
-                        .frame(width: 60, height: 60, alignment: .center)
-                        .background(Color.primaryColor)
-                        .cornerRadius(30)
-                        .padding()
-                        .shadow(color: Color.black.opacity(0.3),
-                                radius: 3,
-                                x: 3,
-                                y: 3)
-                }
-            }
+            }.navigationBarTitle("Spendthrifter")
         }
     }
 }

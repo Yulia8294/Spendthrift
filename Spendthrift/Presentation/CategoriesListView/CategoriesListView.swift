@@ -14,23 +14,23 @@ struct CategoriesListView: View {
     @State var categories = ExpenseCategory.allCases
     @Binding var pickedCategory: ExpenseCategory
     
-    let columns = [
-        GridItem(.flexible(minimum: 60), spacing: 20),
-        GridItem(.flexible(minimum: 60), spacing: 20)
-    ]
+//    let columns = [
+//        GridItem(.flexible(minimum: 60), spacing: 20),
+//        GridItem(.flexible(minimum: 60), spacing: 20)
+//    ]
 
     
     var body: some View {
         ScrollView() {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(categories, id: \.self) { cat in
-                    CategoryCard(category: cat, onButtonPress: {
-                        pickedCategory = cat
-                        presentation.wrappedValue.dismiss()
-                    }).tag(cat as ExpenseCategory)
-                }
-            }
-            .padding()
+//            LazyVGrid(columns: columns, spacing: 20) {
+//                ForEach(categories, id: \.self) { cat in
+//                    CategoryCard(category: cat, onButtonPress: {
+//                        pickedCategory = cat
+//                        presentation.wrappedValue.dismiss()
+//                    }).tag(cat as ExpenseCategory)
+//                }
+//            }
+//            .padding()
         }
     }
 }

@@ -9,7 +9,7 @@ import Combine
 
 class ExpensesRepo: ObservableObject {
     
-    @Published var expenses = [Expense]()
+    @Published var expenses: [Expense] = fakeExpenses + fakeExpenses + fakeExpenses
     
     func append(_ expense: Expense) {
         expenses.append(expense)

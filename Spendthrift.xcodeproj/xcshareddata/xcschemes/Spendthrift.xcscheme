@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A3EDD946262A1ABC002160E2"
-               BuildableName = "Spendthrift.app"
-               BlueprintName = "Spendthrift"
+               BuildableName = "Spendthriftt.app"
+               BlueprintName = "Spendthriftt"
                ReferencedContainer = "container:Spendthrift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3EDD946262A1ABC002160E2"
-            BuildableName = "Spendthrift.app"
-            BlueprintName = "Spendthrift"
+            BuildableName = "Spendthriftt.app"
+            BlueprintName = "Spendthriftt"
             ReferencedContainer = "container:Spendthrift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A3EDD946262A1ABC002160E2"
-            BuildableName = "Spendthrift.app"
-            BlueprintName = "Spendthrift"
+            BuildableName = "Spendthriftt.app"
+            BlueprintName = "Spendthriftt"
             ReferencedContainer = "container:Spendthrift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

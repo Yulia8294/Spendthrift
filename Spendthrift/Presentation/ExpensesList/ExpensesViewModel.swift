@@ -11,7 +11,11 @@ import Combine
 
 class ExpensesViewModel: ObservableObject {
     
-    @Published var addingNewExpense = false
+    @Published var addingNewExpense = false {
+        didSet {
+            print(addingNewExpense)
+        }
+    }
     @Published var repo: ExpensesRepo = Resolver.resolve()
     @Published var items: [Expense] = []
     
