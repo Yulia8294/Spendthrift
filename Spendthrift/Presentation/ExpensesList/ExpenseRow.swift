@@ -66,4 +66,14 @@ struct ExpenseRowButton_Previews: PreviewProvider {
     }
 }
 
+struct PressDownButton: ButtonStyle {
+        
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(.spring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.5))
+    }
+}
+
+
 

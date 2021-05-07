@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CategoriesListView: View {
     
+    @Environment(\.presentationMode) var presentation
+    
     @State var categories = ExpenseCategory.allCases
+    @Binding var pickedCategory: ExpenseCategory
     
     let columns = [
         GridItem(.flexible(minimum: 60), spacing: 20),
@@ -18,10 +21,13 @@ struct CategoriesListView: View {
 
     
     var body: some View {
-        ScrollView {
+        ScrollView() {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(categories, id: \.self) { cat in
-                    CategoryCard(category: cat)
+                    CategoryCard(category: cat, onButtonPress: {
+                        pickedCategory = cat
+                        presentation.wrappedValue.dismiss()
+                    }).tag(cat as ExpenseCategory)
                 }
             }
             .padding()
@@ -31,7 +37,7 @@ struct CategoriesListView: View {
 
 struct CategoriesListView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesListView()
+        CategoriesListView(pickedCategory: Binding.constant(.foods))
     }
 }
 

@@ -105,6 +105,7 @@
 		A38D6020263D28BA00B405E2 /* ExpensesList */ = {
 			isa = PBXGroup;
 			children = (
+				A374E055262A2CBD00DE46EF /* ExpenseRow.swift */,
 				A3EDD94C262A1ABC002160E2 /* ExpensesView.swift */,
 				A38D6022263D28DE00B405E2 /* ExpensesViewModel.swift */,
 			);
@@ -114,6 +115,7 @@
 		A38D6021263D28C600B405E2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A3C3C86A2645BC4800D6ABC1 /* CategoriesListView */,
 				A38D6020263D28BA00B405E2 /* ExpensesList */,
 				A39170F02631856E00C17E48 /* NewExpense */,
 			);
@@ -154,6 +156,16 @@
 			path = NewExpense;
 			sourceTree = "<group>";
 		};
+		A3C3C86A2645BC4800D6ABC1 /* CategoriesListView */ = {
+			isa = PBXGroup;
+			children = (
+				A39170E1263153C400C17E48 /* CategoryItem.swift */,
+				A39171022631B7ED00C17E48 /* CategoriesListView.swift */,
+				A39171082631C04000C17E48 /* CategoryCard.swift */,
+			);
+			path = CategoriesListView;
+			sourceTree = "<group>";
+		};
 		A3EDD93E262A1ABC002160E2 = {
 			isa = PBXGroup;
 			children = (
@@ -184,11 +196,7 @@
 				A3EDD94E262A1AC0002160E2 /* Assets.xcassets */,
 				A3EDD953262A1AC0002160E2 /* Info.plist */,
 				A3EDD950262A1AC0002160E2 /* Preview Content */,
-				A374E055262A2CBD00DE46EF /* ExpenseRow.swift */,
-				A39170E1263153C400C17E48 /* CategoryItem.swift */,
 				A39170E4263153E100C17E48 /* Theme.swift */,
-				A39171022631B7ED00C17E48 /* CategoriesListView.swift */,
-				A39171082631C04000C17E48 /* CategoryCard.swift */,
 			);
 			path = Spendthrift;
 			sourceTree = "<group>";
